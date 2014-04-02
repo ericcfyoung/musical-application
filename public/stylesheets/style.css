@@ -1,0 +1,36 @@
+.piano-holder {
+	width: 98%;
+	margin: 0 1%;
+	padding: 100px 0 0;
+	height: 100px;
+	background: #bebebe;
+}
+
+.keys {
+	background-color: #FFF;
+	width: 98%;
+	margin: 0 auto;
+	height: 100px;
+}
+
+.key {
+
+}
+
+.white {
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	width: 1.923076923076923%;
+	position: relative;
+	border: 1px solid #EBEBEB;
+	height: 100px;
+	float: left;
+}
+
+.black {
+	position: absolute;
+	width: 50%;
+	right: -25%;
+	height: 65px;
+	background-color: #000;
+	z-index: 2;
+}
