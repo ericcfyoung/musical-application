@@ -34,3 +34,11 @@
 	background-color: #000;
 	z-index: 2;
 }
+
+.white.down {
+	background-color: #4592FF;
+}
+
+.black.down {
+	background-color: #2962B3;
+}
