@@ -1,8 +1,6 @@
 .piano-holder {
 	width: 98%;
 	margin: 0 1%;
-	padding: 100px 0 0;
-	height: 100px;
 	background: #bebebe;
 }
 
@@ -42,3 +40,71 @@
 .black.down {
 	background-color: #2962B3;
 }
+
+.key-label {
+	position: absolute;
+	display: block;
+	opacity: 0;	
+}
+
+.white .key-label {
+	bottom: 2px;
+	left: 25%;
+	width: 50%;
+
+}
+
+.black .key-label {
+	top: -20px;
+}
+
+.right-first .right-hand-first,
+.left-first .left-hand-first, 
+.right-second .right-hand-second, 
+.left-second .left-hand-second {
+	opacity: 1;
+}
+
+.piano-controls {
+	height: 100px;
+	padding: 5px 10px 20px;
+}
+
+.right-hand {
+	float: right;
+}
+
+.left-hand {
+	float: left;
+}
+
+.hand-control {
+	background: #EFEFEF;
+	border: 1px solid #BEBEBE;
+	border-radius: 4px;
+	cursor: pointer;
+	display: block;
+	height: 25px;
+	position: relative;
+	width: 80px;
+	margin: 5px auto 0;
+}
+
+.hand-control:after {
+	background-color: #1B9EF5;
+	border-radius: 4px;
+	content: "";
+	display: block;
+	height: 21px;
+	left: 2px;
+	position: absolute;
+	top: 2px;
+	width: 40px;
+}
+
+.left-second .left-hand .hand-control:after,
+.right-second .right-hand .hand-control:after {
+	background-color: #33C457;
+	left: 38px;
+}
+

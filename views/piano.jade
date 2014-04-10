@@ -1,21 +1,32 @@
 extends layout
 
 block content
-	section.piano-holder
+	section.piano-holder(data-left-hand-position="first" data-right-hand-position="first" class="left-first right-first")
+		div.piano-controls
+			div.hand-positions.clearfix
+				div.left-hand
+					h3= "Left Hand Position"
+					span.hand-control(data-hand-position="first" data-hand="left")
+				div.right-hand
+					h3= "Right Hand Position"
+					span.hand-control(data-hand-position="first" data-hand="right")
 		div.keys
-			- var key_value = 20;
-			- var key_iterator = 0;
-			- var section_iterator = 1;
-			- var key_infos = { key_info_1 : [1,0,1,1,0,1,1,1,0,1,1,0,1], key_info_2 : [1,1,0,1,1,0,1,1,1,0,1,1,0], key_info_3 : [1,1,1,0,1,1,0,1,1,1,0,1,1], key_info_4 : [0,1,1,1,0,1,1,0,1,1,1,0,0]};
 			- for (section_iterator; section_iterator < 5; section_iterator++) {	
 				div(class="keys-section section-" + section_iterator + " clearfix")
 					- var key_info = key_infos['key_info_' + section_iterator];
 					-for (i=0; i < key_info.length; i++) {
 						- key_value++;
 						div.key.white(data-note=key_value)
+							- if (key_labels[key_value]) {
+								span(class="key-label " + key_labels[key_value][0])= key_labels[key_value][1]
+							- }
+									
 							- if (key_info[i] == 1) {
 								- key_value++;
 								div.key.black(data-note=key_value)
+									- if (key_labels[key_value]) {
+										span(class="key-label " + key_labels[key_value][0])= key_labels[key_value][1]
+									- }
 							-}	
 					- }			
 			- }
