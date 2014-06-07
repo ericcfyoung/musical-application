@@ -1,6 +1,7 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
+var mongo = require('mongodb');
 var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
@@ -21,7 +22,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'dist')));
 app.use(app.router);
 
 app.get('/', routes.index);
