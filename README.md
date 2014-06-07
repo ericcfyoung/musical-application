@@ -18,6 +18,11 @@ Getting Started:
 
 **Changelog**
 
+- **v0.1.25**
+  - Added Grunt support for launching server and concatinate/minify files.
+  - Modified project to use concatinated files.
+  - added base jasmine spec and added jasmine to gruntfile
+
 - **v0.1.2**
   - Added Vagrant support and configuration
 
